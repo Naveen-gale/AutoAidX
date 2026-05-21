@@ -3,65 +3,77 @@ import { Link } from 'react-router-dom';
 
 const Heder = () => {
   return (
-    <header className="bg-slate-950/80 backdrop-blur-lg border-b border-slate-800 sticky top-0 z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <div className="w-full flex flex-col font-sans animate-fade-in">
+      {/* Top Info Bar */}
+      <div className="bg-[#1a1a1a] text-[#b3b3b3] text-xs py-2.5 hidden md:block border-b border-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
-          {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center gap-3 group">
-            {/* Wrench Icon with subtle background */}
-            <div className="p-2 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-colors duration-300">
-              <svg className="h-6 w-6 text-blue-400 group-hover:text-blue-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-              </svg>
+          {/* Left: Contact Info */}
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2 hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer origin-left">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <span className="font-medium tracking-wide">1234 Sunset Avenue, Los Angeles, CA 90001, USA</span>
             </div>
-            <Link to="/" className="text-2xl font-extrabold text-slate-100 tracking-tight">
-              Auto Aid<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">X</span>
-            </Link>
+            <div className="flex items-center space-x-2 hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer origin-left">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              <span className="font-medium tracking-wide">+1 (555) 123-4567</span>
+            </div>
+            <div className="flex items-center space-x-2 hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer origin-left">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <span className="font-medium tracking-wide">info@carrentalhub.com</span>
+            </div>
           </div>
-
-          {/* Navigation Routes */}
-          <nav className="hidden md:flex items-center space-x-2">
-            <Link
-              to="/brand"
-              className="text-slate-300 hover:text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
-            >
-              Brands
-            </Link>
-            
-            {/* Highlighted AI Mechanic Link */}
-            <Link
-              to="/ai"
-              className="relative group px-4 py-2 font-medium transition-all duration-300"
-            >
-              <span className="absolute inset-0 w-full h-full rounded-lg bg-gradient-to-r from-blue-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="relative flex items-center gap-2 text-blue-400 group-hover:text-blue-300">
-                {/* Spark/Lightning Icon */}
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                AI Mechanic
-              </span>
-            </Link>
-          </nav>
-
-          {/* Admin Section */}
-          <div className="flex items-center">
-            <Link
-              to="/admin"
-              className="group flex items-center gap-2 text-slate-400 hover:text-white bg-slate-900/50 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 border border-slate-700 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]"
-            >
-              {/* User Icon SVG */}
-              <svg className="w-5 h-5 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="hidden sm:inline text-sm">Admin</span>
-            </Link>
+          
+          {/* Right: Social Icons */}
+          <div className="flex items-center space-x-5">
+            <svg className="w-4 h-4 cursor-pointer hover:text-white hover:scale-125 transition-all duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <svg className="w-4 h-4 cursor-pointer hover:text-white hover:scale-125 transition-all duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg className="w-4 h-4 cursor-pointer hover:text-white hover:scale-125 transition-all duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
           </div>
 
         </div>
       </div>
-    </header>
+
+      {/* Main Navbar */}
+      <header className="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-24">
+            
+            {/* Logo Section */}
+            <Link to="/" className="flex-shrink-0 flex items-center gap-2 group cursor-pointer hover:scale-105 transition-all duration-300 origin-left">
+              {/* Car Icon matching BuyAuto logo */}
+              <svg className="h-10 w-10 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 16H9m10 0h3v-3.15a1 1 0 00-.84-.99L16 11l-2.7-3.6a2 2 0 00-1.6-.8H8.3a2 2 0 00-1.6.8L4 11l-5.16.86a1 1 0 00-.84.99V16h3" />
+                <circle cx="6.5" cy="16.5" r="2.5" />
+                <circle cx="16.5" cy="16.5" r="2.5" />
+                <path d="M15 8h.01" />
+              </svg>
+              <div className="text-3xl font-extrabold tracking-tight flex items-center">
+                <span className="text-[#c8102e]">Auto</span>
+                <span className="text-black">AidX</span>
+              </div>
+            </Link>
+
+            {/* Navigation Routes */}
+            <nav className="hidden md:flex items-center space-x-10 font-bold text-gray-900 text-[15px]">
+              <Link to="/" className="hover:text-[#c8102e] hover:scale-105 inline-block transition-all duration-300 py-2">Home</Link>
+              <Link to="/ai" className="hover:text-[#c8102e] hover:scale-105 inline-block transition-all duration-300 py-2">AI Mechanic</Link>
+            </nav>
+
+            {/* Admin Button */}
+            <div className="flex items-center">
+              <Link
+                to="/admin"
+                className="bg-[#c8102e] hover:bg-[#a00c24] text-white px-8 py-3.5 font-bold btn-hover shadow-md text-sm"
+              >
+                Admin
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </header>
+    </div>
   );
 };
 
