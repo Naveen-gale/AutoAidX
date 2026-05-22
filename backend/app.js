@@ -32,7 +32,7 @@ app.use('/api/problems', problemRoutes);
 app.use('/api/ai', aiRoutes);
 
 // Health check
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.json({ message: 'AutoAidX Backend is running 🚗' });
 });
 

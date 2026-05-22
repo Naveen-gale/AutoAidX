@@ -5,7 +5,7 @@ const verifyAdmin = require('../middleware/auth');
 const { upload, uploadToImageKit } = require('../middleware/upload');
 
 // GET /api/brands — public, get all brands
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   try {
     const brands = await Brand.find().sort({ createdAt: -1 });
     res.json(brands);

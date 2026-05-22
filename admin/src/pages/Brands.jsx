@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const BACKEND = 'http://localhost:5000'
 const token = () => localStorage.getItem('adminToken')

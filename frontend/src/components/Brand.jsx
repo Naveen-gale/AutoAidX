@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const BACKEND = 'http://localhost:5000';
@@ -29,7 +29,7 @@ const Brand = () => {
   }, []);
 
   // Filter and Sort logic
-  let processedBrands = brands.filter(b => 
+  const processedBrands = brands.filter(b => 
     b.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 

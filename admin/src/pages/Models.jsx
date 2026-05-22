@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const BACKEND = 'http://localhost:5000'
 const token = () => localStorage.getItem('adminToken')
@@ -34,7 +34,7 @@ export default function Models() {
 
   const loadModels = async () => {
     if (brands.length === 0) return
-    let all = []
+    const all = []
     const list = filterBrand ? brands.filter(b => b._id === filterBrand) : brands
     for (const b of list) {
       const res = await fetch(`${BACKEND}/api/models/${b._id}`)

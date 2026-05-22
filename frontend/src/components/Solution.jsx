@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const BACKEND = 'http://localhost:5000';
@@ -45,7 +45,7 @@ const Solution = () => {
         });
         const aiData = await aiRes.json();
         setSolution(aiData.solution || 'No solution generated.');
-      } catch (err) {
+      } catch (_err) {
         setError('Failed to generate AI solution. Please try again.');
       } finally {
         setLoading(false);

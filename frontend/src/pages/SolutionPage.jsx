@@ -1,4 +1,3 @@
-import React from 'react';
 import Heder from '../components/Heder';
 import Solution from '../components/Solution';
 

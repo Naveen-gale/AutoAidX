@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import Brands from './Brands'
 import Models from './Models'
