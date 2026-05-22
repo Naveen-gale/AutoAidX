@@ -159,7 +159,7 @@ const Brand = () => {
                     >
                       {/* Badge */}
                       <div className="absolute top-4 right-4 bg-[#c8102e] text-white px-3 py-1 text-[13px] font-bold z-10 tracking-wide shadow-sm">
-                        {index % 2 === 0 ? 'Used' : 'New'}
+                        NEW
                       </div>
                       
                       {/* Brand Logo as Car Image */}
@@ -177,14 +177,8 @@ const Brand = () => {
                         <p className="text-gray-500 text-[15px] mb-1 font-medium tracking-wide">Brand Name</p>
                         <h3 className="text-[22px] font-bold text-black mb-3">{brand.name}</h3>
                         
-                        <div className="mb-5 mt-1">
-                          <span className="text-[#c8102e] text-xl font-bold tracking-wide">
-                            $ {Math.floor(brand.name.length * 4500 + 12000)}
-                          </span>
-                        </div>
-                        
                         <button className="w-full bg-[#c8102e] hover:bg-[#a00c24] text-white font-bold py-3 transition-colors mt-auto text-[15px] btn-hover">
-                          View Offer
+                          SELECT MODEL
                         </button>
                       </div>
                     </div>
